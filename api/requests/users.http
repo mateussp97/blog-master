@@ -1,0 +1,33 @@
+# Create a new user
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "email": "mateusdesouzapaula97@gmail.com",
+  "name": "John Doe"
+}
+
+###
+
+# Delete a user by their ID
+DELETE http://localhost:3000/users/14
+
+###
+
+# Retrieve all users
+GET http://localhost:3000/users
+
+###
+
+# Retrieve a single user by their ID
+GET http://localhost:3000/users/15
+
+###
+
+# Update a user by their ID
+PATCH http://localhost:3000/users/15
+Content-Type: application/json
+
+{
+  "name": "Doe John"
+}

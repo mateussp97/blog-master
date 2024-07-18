@@ -1,0 +1,60 @@
+# Create a new post with authorEmail
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "Automated CRUD with NestJS and Prisma",
+  "content": "Learn how to create an automated CRUD with NestJS and Prisma.",
+  "published": true,
+  "authorEmail": "johndoe@acme.com"
+}
+
+###
+
+# Create a new unpublished post with authorEmail
+POST http://localhost:3000/posts
+Content-Type: application/json
+
+{
+  "title": "Automated CRUD with NestJS and Prisma",
+  "content": "Learn how to create an automated CRUD with NestJS and Prisma.",
+  "published": false,
+  "authorEmail": "johndoe@acme.com"
+}
+
+###
+
+# Delete a post by its ID
+DELETE http://localhost:3000/posts/190
+
+###
+
+# Retrieve the feed of posts
+GET http://localhost:3000/posts/feed
+
+###
+
+# Retrieve all posts
+GET http://localhost:3000/posts
+
+###
+
+# Retrieve a single post by its ID
+GET http://localhost:3000/posts/108
+
+###
+
+# Publish a post by its ID
+PATCH http://localhost:3000/posts/publish/108
+
+###
+
+# Update a post by its ID
+PUT http://localhost:3000/posts/108
+Content-Type: application/json
+
+{
+   "title": "Vetus adduco harum apparatus.",
+  "content": "Architecto cruentus demulceo tepesco amplus ipsam. Architecto abundans cubo alias teres cariosus delego dolorum. Sublime damno eligendi cedo depromo copia causa.",
+  "published": false
+}
